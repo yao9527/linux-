@@ -11,10 +11,10 @@
 |查看端口号被哪个占用|lsof -i:端口号|
 |给文件添加删除权限|chattr +i|
 |搜索git|find / -name git|
-|模糊搜索文件|find . -name "*.conf" | xargs grep ""|
+|模糊搜索文件|find . -name "*.conf" \| xargs grep ""|
 |查看端口情况|netstat -pan \| grep 80|
 |显示当前文件夹文件的个数|ls \| wc -l|
-|安装crontab|yum -y install vixie-cron、yum -y install crontabs||
+|安装crontab|yum -y install vixie-cron、yum -y install crontabs|
 |修改默认22远程端口|vi /etc/ssh/sshd-config|在最末尾添加port端口、重启sshd服务、service sshd restart|
 |查看应用安装路径|whereis 文件名称|
 |重启nginx|/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf|
