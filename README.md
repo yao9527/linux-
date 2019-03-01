@@ -21,7 +21,7 @@
 |快速重启nginx|nginx -s stop|
 |完整有序的停止nginx|nginx -s quit|
 |查看所有当前tcp端口使用情况|netstat -ntlp|
-|查看80端口使用情况|netstat -tpln|grep 80|
+|查看80端口使用情况|netstat -tpln\|grep 80|
 |使用代理查看某地址是否能访问|wget http://127.0.0.1/api/crawler/data/filelist -e use_proxy=yes -e http_proxy=代理ip:8002|
 |查看某服务的端口|telnet 127.0.0.1 80|
 |挂载执行某个python代码|nohup /usr/sbin/python3 /home/cli/a.py &|
