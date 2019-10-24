@@ -22,7 +22,7 @@
 |完整有序的停止nginx|nginx -s quit|
 |查看所有当前tcp端口使用情况|netstat -ntlp|
 |查看80端口使用情况|netstat -tpln\|grep 80|
-|使用代理查看某地址是否能访问|wget http://127.0.0.1/api/crawler/data/filelist -e use_proxy=yes -e http_proxy=代理ip:8002|
+|使用代理查看某地址是否能访问|wget http://127.0.0.1/api/crawler/data/filelist -e use_proxy=yes -e http_proxy=代理ip:端口号|
 |查看某服务的端口|telnet 127.0.0.1 80|
 |挂载执行某个python代码|nohup /usr/sbin/python3 /home/cli/a.py &|
 |杀掉某个应用的进程(根据应用名)|kill -9 $(ps aux \| grep "sync_service.py" \| grep -v "grep" \| tr -s ' '\| cut -d ' ' -f 2)|
