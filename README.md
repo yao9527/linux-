@@ -27,5 +27,12 @@
 |查看本机端口|netstat 80|
 |挂载执行某个python代码|nohup /usr/sbin/python3 /home/cli/a.py &|
 |杀掉某个应用的进程(根据应用名)|kill -9 $(ps aux \| grep "sync_service.py" \| grep -v "grep" \| tr -s ' '\| cut -d ' ' -f 2)|
+|查看防火墙的状态 (dead代表关闭 running代表已经开启)|systemctl status firewalld|
+|查看防火墙所有开放的端口|firewall-cmd --list-ports|
+|开启防火墙|systemctl start firewalld|
+|开放指定端口号（同时注意要在云服务器开放端口）|firewall-cmd --permanent --add-port=80/tcp|
+|重启防火墙|firewall-cmd --reload|
+|查询指定端口是否有进程守护，用如下命令grep对应端口（以80端口为例）|netstat -nalp|grep 80|
+|关闭防火墙|systemctl disable firewalld|
 
 
